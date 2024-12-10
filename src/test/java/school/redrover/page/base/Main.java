@@ -6,8 +6,6 @@ public class Main {
     public static void main(String[] args) {
         Object object = new Object();
 
-
-
         WebDriver driver = null;
 
         NewBaseModel baseModel = new NewBaseModel(driver);
