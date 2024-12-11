@@ -88,8 +88,8 @@ jobs:
       - name: Docker start
         run: docker run --rm --detach -p 8080:8080 -v ${{ github.workspace }}/jenkins_backup/var/jenkins_home:/var/jenkins_home jenkins/jenkins:2.462.3-lts-jdk17
 
-      - name: Wait for the Jenkins
-        run: ./.github/wait-for-jenkins.sh
+#      - name: Wait for the Jenkins
+#        run: ./.github/wait-for-jenkins.sh
 
       - name: Create screenshots directory
         run: mkdir -p ${{ github.workspace }}/screenshots
@@ -106,7 +106,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: screenshots
-#          path: ${{ github.workspace }}/screenshots
-          path: |
-            screenshots
-            target/surefire-reports/emailable-report.html
+          path: ${{ github.workspace }}/screenshots
