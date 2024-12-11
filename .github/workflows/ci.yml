@@ -26,11 +26,11 @@ jobs:
       - name: Get list of changed files
         run: echo "LIST_OF_CHANGED_FILES=$(git diff --name-only origin/$GITHUB_HEAD_REF $(git merge-base origin/$GITHUB_HEAD_REF origin/main) | tr '\n' ';')" >> $GITHUB_ENV
 
-      #      - name: Prepare Jenkins data
-      #        run: |
-      #          cat ${{ github.workspace }}/jenkins_data/jenkins_backup0* > ${{ github.workspace }}/jenkins_backup.tar
-      #          md5sum ${{ github.workspace }}/jenkins_backup.tar
-      #
+      - name: Prepare Jenkins data
+        run: |
+          cat ${{ github.workspace }}/jenkins_data/jenkins_backup0* > ${{ github.workspace }}/jenkins_backup.tar
+          md5sum ${{ github.workspace }}/jenkins_backup.tar
+
       #      - name: Extract Jenkins data and set permission
       #        run: |
       #          tar -xvf ./jenkins_backup.tar
