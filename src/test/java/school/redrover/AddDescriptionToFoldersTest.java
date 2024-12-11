@@ -19,7 +19,7 @@ public class AddDescriptionToFoldersTest extends BaseTest {
                 .clickSubmitButton()
                 .getDescription();
 
-        Assert.assertEquals(finalResult, DESCRIPTION);
+        Assert.assertEquals(finalResult, "DESCRIPTION");
     }
 
     @Test(dependsOnMethods = "testExistingFolderWithNoDescription")
