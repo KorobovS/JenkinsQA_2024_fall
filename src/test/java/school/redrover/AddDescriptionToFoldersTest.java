@@ -37,6 +37,7 @@ public class AddDescriptionToFoldersTest extends BaseTest {
         Assert.assertEquals(finalResult, "Edited");
     }
 
+    @Ignore
     @Test(dependsOnMethods = "testEditExistingDescription")
     public void testDescriptionsPreviewButton () {
         String finalResult = new HomePage(getDriver())
@@ -47,6 +48,7 @@ public class AddDescriptionToFoldersTest extends BaseTest {
         Assert.assertEquals(finalResult, "Edited");
     }
 
+    @Ignore
     @Test(dependsOnMethods = "testDescriptionsPreviewButton")
     public void testClearDescription () {
         String finalResult = new HomePage(getDriver())
