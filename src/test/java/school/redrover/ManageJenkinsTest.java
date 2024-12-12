@@ -360,7 +360,6 @@ public class ManageJenkinsTest extends BaseTest {
         manageButton.click();
         WebElement appearanceButton = getDriver().findElement(By.xpath("//a[@href='appearance']"));
         appearanceButton.click();
-
         WebElement changedColorArea = getDriver().findElement(By.xpath("//section[@class='jenkins-section']"));
 
         String initialColorTheme = changedColorArea.getCssValue("background");
